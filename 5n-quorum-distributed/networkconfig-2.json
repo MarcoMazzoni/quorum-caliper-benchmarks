@@ -1,0 +1,25 @@
+{
+  "caliper": {
+    "blockchain": "quorum",
+    "command": {
+      "start": "docker-compose -f ./config/docker-compose.yml up -d && sleep 75s",
+      "end": "docker-compose -f ./config/docker-compose.yml down"
+    }
+  },
+  "quorum": {
+    "url": "http://config_node_istanbul_2_1:8545",
+    "contractDeployerAddress": "0x39bfebd88ae7f3e29bf0b00536f39d8f62c0bea8",
+    "contractDeployerAddressPassword": "",
+    "fromAddress": "0x333927daba0e7dc239ce1a9da59f8f5412ddf6d9",
+    "privateFrom": "",
+    "fromAddressPassword": "",
+    "transactionConfirmationBlocks": 2,
+    "contracts": {
+      "simple": {
+        "path": "./simple/simple.json",
+        "isPrivate": false,
+        "privateFor": ""
+      }
+    }
+  }
+}
