@@ -1,6 +1,0 @@
-2020-03-28 19:27:49 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ENCRYPTED_TRANSACTION" not found; SQL statement:
-SELECT 1 FROM ENCRYPTED_TRANSACTION [42102-200]
-2020-03-28 19:27:49 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ENCRYPTED_RAW_TRANSACTION" not found; SQL statement:
-SELECT 1 FROM ENCRYPTED_RAW_TRANSACTION [42102-200]
