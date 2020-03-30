@@ -44,7 +44,7 @@ observer:
   type: prometheus
 monitor:
   interval: 1
-  type: prometheus
+  type: ['docker', 'prometheus']
   docker:
     containers:
       [
@@ -59,3 +59,7 @@ monitor:
     push_url: 'http://pushGateway:9091'
     metrics:
       ignore: [prometheus, pushGateway, cadvisor, grafana, node-exporter]
+      include:
+        Dio suino (s):
+          query: sum(caliper_txn_success{instance="transfer", round="2"})
+          step: 1
