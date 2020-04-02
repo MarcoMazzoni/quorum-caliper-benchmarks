@@ -22,7 +22,7 @@ services:
 
   caliper_master:
     container_name: caliper_master
-    image: hyperledger/caliper:0.3.1-unstable-20200328142646
+    image: hyperledger/caliper:0.3.1-unstable-20200402124056
     command: launch master --caliper-flow-skip-start --caliper-flow-skip-end
     environment:
       - CALIPER_BIND_SUT=quorum
@@ -38,7 +38,7 @@ services:
 
   caliper_worker_1:
     container_name: caliper_worker_1
-    image: hyperledger/caliper:0.3.1-unstable-20200328142646
+    image: hyperledger/caliper:0.3.1-unstable-20200402124056
     command: launch worker
     environment:
       - CALIPER_BIND_SUT=quorum
@@ -54,7 +54,7 @@ services:
 
   caliper_worker_2:
     container_name: caliper_worker_2
-    image: hyperledger/caliper:0.3.1-unstable-20200328142646
+    image: hyperledger/caliper:0.3.1-unstable-20200402124056
     command: launch worker
     environment:
       - CALIPER_BIND_SUT=quorum

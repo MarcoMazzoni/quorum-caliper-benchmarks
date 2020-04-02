@@ -2,3 +2,4 @@
 **/qdata_*
 ./report.html
 .current_config
+*.log
