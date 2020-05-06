@@ -20,9 +20,10 @@ services:
   # CALIPER SERVICES #
   ####################
 
+  # Buona: 20200505145838
   caliper_master:
     container_name: caliper_master
-    image: hyperledger/caliper:0.3.1-unstable-20200402124056
+    image: hyperledger/caliper:0.3.1-unstable-20200506001539
     command: launch master --caliper-flow-skip-start --caliper-flow-skip-end
     environment:
       - CALIPER_BIND_SUT=quorum
@@ -38,7 +39,24 @@ services:
 
   caliper_worker_1:
     container_name: caliper_worker_1
-    image: hyperledger/caliper:0.3.1-unstable-20200402124056
+    image: hyperledger/caliper:0.3.1-unstable-20200506001539
+    command: launch worker
+    environment:
+      - CALIPER_BIND_SUT=quorum
+      - CALIPER_BENCHCONFIG=benchconfig.yaml
+      - CALIPER_NETWORKCONFIG=networkconfig-1.json
+    volumes:
+      - ~/Desktop/caliper-docker-tests/5n-quorum-distributed:/hyperledger/caliper/workspace
+    depends_on:
+      - mqtt_broker
+      - caliper_master
+    networks:
+      - config_quorum_net
+      - caliper_net
+
+  caliper_worker_2:
+    container_name: caliper_worker_2
+    image: hyperledger/caliper:0.3.1-unstable-20200506001539
     command: launch worker
     environment:
       - CALIPER_BIND_SUT=quorum
@@ -48,13 +66,14 @@ services:
       - ~/Desktop/caliper-docker-tests/5n-quorum-distributed:/hyperledger/caliper/workspace
     depends_on:
       - mqtt_broker
+      - caliper_master
     networks:
       - config_quorum_net
       - caliper_net
 
-  caliper_worker_2:
-    container_name: caliper_worker_2
-    image: hyperledger/caliper:0.3.1-unstable-20200402124056
+  caliper_worker_3:
+    container_name: caliper_worker_3
+    image: hyperledger/caliper:0.3.1-unstable-20200506001539
     command: launch worker
     environment:
       - CALIPER_BIND_SUT=quorum
@@ -64,6 +83,7 @@ services:
       - ~/Desktop/caliper-docker-tests/5n-quorum-distributed:/hyperledger/caliper/workspace
     depends_on:
       - mqtt_broker
+      - caliper_master
     networks:
       - config_quorum_net
       - caliper_net
@@ -87,6 +107,7 @@ services:
       - '9090:9090'
     networks:
       - caliper_net
+      - config_quorum_net
 
   pushGateway:
     image: prom/pushgateway
@@ -95,6 +116,7 @@ services:
       - '9091:9091'
     networks:
       - caliper_net
+      - config_quorum_net
 
   grafana:
     image: grafana/grafana
@@ -112,6 +134,7 @@ services:
     restart: always
     networks:
       - caliper_net
+      - config_quorum_net
 
   node-exporter:
     image: prom/node-exporter
@@ -129,6 +152,7 @@ services:
     restart: always
     networks:
       - caliper_net
+      - config_quorum_net
 
   cadvisor:
     image: google/cadvisor
@@ -142,6 +166,7 @@ services:
     restart: always
     networks:
       - caliper_net
+      - config_quorum_net
 
 networks:
   caliper_net:

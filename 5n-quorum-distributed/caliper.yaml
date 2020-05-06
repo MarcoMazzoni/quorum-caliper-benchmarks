@@ -15,6 +15,7 @@
 caliper:
   benchconfig: benchconfig.yaml
   networkconfig: networkconfig.json
+  txupdatetime: 1500
   workspace: ./
   report:
     path: report.html
@@ -39,7 +40,7 @@ caliper:
           debug: grey
     targets:
       console:
-        target: console
+        target: redirect-console-to-file
         enabled: true
         options:
           level: debug

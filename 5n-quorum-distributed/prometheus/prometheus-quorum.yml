@@ -21,6 +21,6 @@ scrape_configs:
             'config_node_istanbul_5_1:8545',
           ]
   - job_name: cadvisor
-    scrape_interval: 5s
+    scrape_interval: 1s
     static_configs:
       - targets: ['cadvisor:8080']

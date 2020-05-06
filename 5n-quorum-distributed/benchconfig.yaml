@@ -16,50 +16,50 @@
 test:
   workers:
     type: local
-    number: 2
+    number: 3
   rounds:
     - label: open
-      txNumber: 100
-      rateControl: { type: 'fixed-rate', opts: { tps: 10 } }
+      txNumber: 120
+      rateControl: { type: 'fixed-rate', opts: { tps: 5 } }
       arguments:
         money: 10000
       callback: ./open.js
     - label: query
-      txNumber: 200
+      txNumber: 180
       rateControl:
         {
           type: 'fixed-feedback-rate',
-          opts: { tps: 10, unfinished_per_client: 5 },
+          opts: { tps: 10, unfinished_per_client: 1 },
         }
       callback: ./query.js
     - label: transfer
-      txNumber: 100
+      txNumber: 180
       rateControl:
-        { type: 'linear-rate', opts: { startingTps: 5, finishingTps: 20 } }
+        { type: 'linear-rate', opts: { startingTps: 5, finishingTps: 10 } }
       arguments:
-        money: 10000
+        money: 1000
       callback: ./transfer.js
 observer:
-  interval: 5
+  interval: 3
   type: prometheus
 monitor:
   interval: 1
-  type: ['docker', 'prometheus']
-  docker:
-    containers:
-      [
-        'config_node_istanbul_1_1:8545',
-        'config_node_istanbul_2_1:8545',
-        'config_node_istanbul_3_1:8545',
-        'config_node_istanbul_4_1:8545',
-        'config_node_istanbul_5_1:8545',
-      ]
+  type: prometheus
   prometheus:
     url: 'http://prometheus:9090'
     push_url: 'http://pushGateway:9091'
     metrics:
       ignore: [prometheus, pushGateway, cadvisor, grafana, node-exporter]
       include:
-        Dio suino (s):
-          query: sum(caliper_txn_success{instance="transfer", round="2"})
-          step: 1
+        Avg Memory (MB):
+          query: sum(container_memory_rss{name=~".+"}) by (name)
+          step: 10
+          label: name
+          statistic: avg
+          multiplier: 0.000001
+        CPU (%):
+          query: sum(rate(container_cpu_usage_seconds_total{name=~".+"}[1m])) by (name)
+          step: 10
+          label: name
+          statistic: avg
+          multiplier: 100
