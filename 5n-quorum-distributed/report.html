@@ -154,13 +154,13 @@
                     </tr>
 
                     <tr>
-                         <td>open</td> <td>120</td> <td>0</td> <td>4.70</td> <td>2.09</td> <td>1.74</td> <td>2.04</td> <td>4.5</td>
+                         <td>open</td> <td>120</td> <td>0</td> <td>4.72</td> <td>2.11</td> <td>1.54</td> <td>2.01</td> <td>4.5</td>
                     </tr>
                     <tr>
-                         <td>query</td> <td>180</td> <td>0</td> <td>9.93</td> <td>0.03</td> <td>0.01</td> <td>0.01</td> <td>9.2</td>
+                         <td>query</td> <td>180</td> <td>0</td> <td>10.00</td> <td>0.02</td> <td>0.01</td> <td>0.01</td> <td>9.2</td>
                     </tr>
                     <tr>
-                         <td>transfer</td> <td>180</td> <td>0</td> <td>6.32</td> <td>2.10</td> <td>1.72</td> <td>1.97</td> <td>5.8</td>
+                         <td>transfer</td> <td>180</td> <td>0</td> <td>6.25</td> <td>2.35</td> <td>1.70</td> <td>2.02</td> <td>5.9</td>
                     </tr>
                 </table>
             </div>
@@ -178,7 +178,7 @@
                                      <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
                                 </tr>
                                 <tr>
-                                     <td>open</td> <td>120</td> <td>0</td> <td>4.70</td> <td>2.09</td> <td>1.74</td> <td>2.04</td> <td>4.5</td>
+                                     <td>open</td> <td>120</td> <td>0</td> <td>4.72</td> <td>2.11</td> <td>1.54</td> <td>2.01</td> <td>4.5</td>
                                 </tr>
                             </table>
                         <h3>Resource utilization for open</h3>
@@ -190,64 +190,64 @@
                                          <th>Metric</th> <th>Prometheus Query</th> <th>Name</th> <th>Value</th>
                                     </tr>
                                     <tr>
-                                         <td>Avg Memory (MB)</td> <td>sum(container_memory_rss{name&#x3D;~&quot;.+&quot;}) by (name)</td> <td>caliper_master</td> <td>46.0</td>
+                                         <td>Avg Memory (MB)</td> <td>sum(container_memory_rss{name&#x3D;~&quot;.+&quot;}) by (name)</td> <td>caliper_master</td> <td>44.9</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>caliper_worker_1</td> <td>48.9</td>
+                                         <td></td> <td></td> <td>caliper_worker_1</td> <td>49.8</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>caliper_worker_2</td> <td>49.2</td>
+                                         <td></td> <td></td> <td>caliper_worker_2</td> <td>47.6</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>caliper_worker_3</td> <td>47.4</td>
+                                         <td></td> <td></td> <td>caliper_worker_3</td> <td>50.2</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_1_1</td> <td>896</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_1_1</td> <td>1.03e+3</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_2_1</td> <td>905</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_2_1</td> <td>1.04e+3</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_3_1</td> <td>876</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_3_1</td> <td>1.01e+3</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_4_1</td> <td>875</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_4_1</td> <td>1.02e+3</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_5_1</td> <td>879</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_5_1</td> <td>1.02e+3</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>mqtt_broker</td> <td>0.119</td>
+                                         <td></td> <td></td> <td>mqtt_broker</td> <td>0.254</td>
                                     </tr>
                                     <tr>
-                                         <td>CPU (%)</td> <td>sum(rate(container_cpu_usage_seconds_total{name&#x3D;~&quot;.+&quot;}[1m])) by (name)</td> <td>caliper_master</td> <td>47.6</td>
+                                         <td>CPU (%)</td> <td>sum(rate(container_cpu_usage_seconds_total{name&#x3D;~&quot;.+&quot;}[1m])) by (name)</td> <td>caliper_master</td> <td>47.0</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>caliper_worker_1</td> <td>48.5</td>
+                                         <td></td> <td></td> <td>caliper_worker_1</td> <td>47.9</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>caliper_worker_2</td> <td>48.1</td>
+                                         <td></td> <td></td> <td>caliper_worker_2</td> <td>48.3</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>caliper_worker_3</td> <td>49.0</td>
+                                         <td></td> <td></td> <td>caliper_worker_3</td> <td>47.6</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_1_1</td> <td>6.16</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_1_1</td> <td>4.89</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_2_1</td> <td>6.28</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_2_1</td> <td>4.86</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_3_1</td> <td>5.86</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_3_1</td> <td>4.57</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_4_1</td> <td>6.03</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_4_1</td> <td>4.78</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_5_1</td> <td>5.88</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_5_1</td> <td>4.54</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>mqtt_broker</td> <td>0.0515</td>
+                                         <td></td> <td></td> <td>mqtt_broker</td> <td>0.0513</td>
                                     </tr>
                                 </table>
                                 </tr>
@@ -271,7 +271,7 @@
                                      <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
                                 </tr>
                                 <tr>
-                                     <td>query</td> <td>180</td> <td>0</td> <td>9.93</td> <td>0.03</td> <td>0.01</td> <td>0.01</td> <td>9.2</td>
+                                     <td>query</td> <td>180</td> <td>0</td> <td>10.00</td> <td>0.02</td> <td>0.01</td> <td>0.01</td> <td>9.2</td>
                                 </tr>
                             </table>
                         <h3>Resource utilization for query</h3>
@@ -283,64 +283,64 @@
                                          <th>Metric</th> <th>Prometheus Query</th> <th>Name</th> <th>Value</th>
                                     </tr>
                                     <tr>
-                                         <td>Avg Memory (MB)</td> <td>sum(container_memory_rss{name&#x3D;~&quot;.+&quot;}) by (name)</td> <td>caliper_master</td> <td>51.8</td>
+                                         <td>Avg Memory (MB)</td> <td>sum(container_memory_rss{name&#x3D;~&quot;.+&quot;}) by (name)</td> <td>caliper_master</td> <td>48.9</td>
                                     </tr>
                                     <tr>
                                          <td></td> <td></td> <td>caliper_worker_1</td> <td>54.1</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>caliper_worker_2</td> <td>51.9</td>
+                                         <td></td> <td></td> <td>caliper_worker_2</td> <td>48.9</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>caliper_worker_3</td> <td>49.0</td>
+                                         <td></td> <td></td> <td>caliper_worker_3</td> <td>54.2</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_1_1</td> <td>898</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_1_1</td> <td>1.04e+3</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_2_1</td> <td>908</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_2_1</td> <td>1.04e+3</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_3_1</td> <td>877</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_3_1</td> <td>1.01e+3</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_4_1</td> <td>875</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_4_1</td> <td>1.02e+3</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_5_1</td> <td>880</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_5_1</td> <td>1.02e+3</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>mqtt_broker</td> <td>0.119</td>
+                                         <td></td> <td></td> <td>mqtt_broker</td> <td>0.254</td>
                                     </tr>
                                     <tr>
-                                         <td>CPU (%)</td> <td>sum(rate(container_cpu_usage_seconds_total{name&#x3D;~&quot;.+&quot;}[1m])) by (name)</td> <td>caliper_master</td> <td>10.8</td>
+                                         <td>CPU (%)</td> <td>sum(rate(container_cpu_usage_seconds_total{name&#x3D;~&quot;.+&quot;}[1m])) by (name)</td> <td>caliper_master</td> <td>12.4</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>caliper_worker_1</td> <td>13.4</td>
+                                         <td></td> <td></td> <td>caliper_worker_1</td> <td>14.1</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>caliper_worker_2</td> <td>12.8</td>
+                                         <td></td> <td></td> <td>caliper_worker_2</td> <td>14.4</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>caliper_worker_3</td> <td>13.6</td>
+                                         <td></td> <td></td> <td>caliper_worker_3</td> <td>14.4</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_1_1</td> <td>9.96</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_1_1</td> <td>7.36</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_2_1</td> <td>10.3</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_2_1</td> <td>7.19</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_3_1</td> <td>9.79</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_3_1</td> <td>6.68</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_4_1</td> <td>9.73</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_4_1</td> <td>6.52</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_5_1</td> <td>9.44</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_5_1</td> <td>6.07</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>mqtt_broker</td> <td>0.0769</td>
+                                         <td></td> <td></td> <td>mqtt_broker</td> <td>0.0823</td>
                                     </tr>
                                 </table>
                                 </tr>
@@ -364,7 +364,7 @@
                                      <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
                                 </tr>
                                 <tr>
-                                     <td>transfer</td> <td>180</td> <td>0</td> <td>6.32</td> <td>2.10</td> <td>1.72</td> <td>1.97</td> <td>5.8</td>
+                                     <td>transfer</td> <td>180</td> <td>0</td> <td>6.25</td> <td>2.35</td> <td>1.70</td> <td>2.02</td> <td>5.9</td>
                                 </tr>
                             </table>
                         <h3>Resource utilization for transfer</h3>
@@ -376,64 +376,64 @@
                                          <th>Metric</th> <th>Prometheus Query</th> <th>Name</th> <th>Value</th>
                                     </tr>
                                     <tr>
-                                         <td>Avg Memory (MB)</td> <td>sum(container_memory_rss{name&#x3D;~&quot;.+&quot;}) by (name)</td> <td>caliper_master</td> <td>52.2</td>
+                                         <td>Avg Memory (MB)</td> <td>sum(container_memory_rss{name&#x3D;~&quot;.+&quot;}) by (name)</td> <td>caliper_master</td> <td>48.8</td>
                                     </tr>
                                     <tr>
                                          <td></td> <td></td> <td>caliper_worker_1</td> <td>54.8</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>caliper_worker_2</td> <td>52.9</td>
+                                         <td></td> <td></td> <td>caliper_worker_2</td> <td>49.6</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>caliper_worker_3</td> <td>50.3</td>
+                                         <td></td> <td></td> <td>caliper_worker_3</td> <td>55.1</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_1_1</td> <td>900</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_1_1</td> <td>1.04e+3</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_2_1</td> <td>910</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_2_1</td> <td>1.05e+3</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_3_1</td> <td>880</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_3_1</td> <td>1.01e+3</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_4_1</td> <td>879</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_4_1</td> <td>1.02e+3</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_5_1</td> <td>883</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_5_1</td> <td>1.02e+3</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>mqtt_broker</td> <td>0.119</td>
+                                         <td></td> <td></td> <td>mqtt_broker</td> <td>0.254</td>
                                     </tr>
                                     <tr>
-                                         <td>CPU (%)</td> <td>sum(rate(container_cpu_usage_seconds_total{name&#x3D;~&quot;.+&quot;}[1m])) by (name)</td> <td>caliper_master</td> <td>1.02</td>
+                                         <td>CPU (%)</td> <td>sum(rate(container_cpu_usage_seconds_total{name&#x3D;~&quot;.+&quot;}[1m])) by (name)</td> <td>caliper_master</td> <td>1.24</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>caliper_worker_1</td> <td>3.12</td>
+                                         <td></td> <td></td> <td>caliper_worker_1</td> <td>3.44</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>caliper_worker_2</td> <td>3.09</td>
+                                         <td></td> <td></td> <td>caliper_worker_2</td> <td>3.57</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>caliper_worker_3</td> <td>3.04</td>
+                                         <td></td> <td></td> <td>caliper_worker_3</td> <td>3.68</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_1_1</td> <td>10.9</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_1_1</td> <td>7.78</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_2_1</td> <td>11.1</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_2_1</td> <td>7.76</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_3_1</td> <td>10.4</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_3_1</td> <td>7.39</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_4_1</td> <td>10.4</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_4_1</td> <td>6.97</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>config_node_istanbul_5_1</td> <td>10.2</td>
+                                         <td></td> <td></td> <td>config_node_istanbul_5_1</td> <td>6.59</td>
                                     </tr>
                                     <tr>
-                                         <td></td> <td></td> <td>mqtt_broker</td> <td>0.0785</td>
+                                         <td></td> <td></td> <td>mqtt_broker</td> <td>0.0793</td>
                                     </tr>
                                 </table>
                                 </tr>
