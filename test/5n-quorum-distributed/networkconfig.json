@@ -1,0 +1,42 @@
+{
+  "caliper": {
+      "blockchain": "quorum",
+      "command": {
+        "start": "",
+        "end": ""
+      }
+  },
+  "quorum": {
+      "nodes": [
+        {
+          "url": "http://config_node_istanbul_1_1:8545",
+          "fromAddress": "0x39bfebd88ae7f3e29bf0b00536f39d8f62c0bea8",
+          "fromAddressPassword": "",
+          "privateFrom": "XXwkNmQYxYK149bp9bItTimJ0SXPh5C3n+dTAQJeKAw="
+      
+        },
+        {
+          "url": "http://config_node_istanbul_2_1:8545",
+          "fromAddress": "0x333927daba0e7dc239ce1a9da59f8f5412ddf6d9",
+          "fromAddressPassword": "",
+          "privateFrom": ""
+        },
+        {
+          "url": "http://config_node_istanbul_3_1:8545",
+          "fromAddress": "0xa2e358c6929b5b8fb5b49df6180f68442313047a",
+          "fromAddressPassword": "",
+          "privateFrom": ""
+        }
+      ],   
+      "contractDeployerAddress": "0x39bfebd88ae7f3e29bf0b00536f39d8f62c0bea8",
+      "contractDeployerAddressPassword": "", 
+      "transactionConfirmationBlocks": 2,
+      "contracts": {
+          "simple": {
+              "path": "./simple/simple.json",
+              "isPrivate": false,
+              "privateFor": ""
+          }
+      }
+  }
+}

@@ -1,0 +1,44 @@
+caliper:
+  benchconfig: benchconfig.yaml
+  networkconfig: networkconfig.json
+  txupdatetime: 2000
+  workspace: ./
+  report:
+    path: report.html
+  logging:
+    template: '%timestamp%%level%%module%%message%%metadata%'
+    formats:
+      timestamp: 'YYYY.MM.DD-HH:mm:ss.SSS ZZ'
+      label: false
+      json: false
+      pad: true
+      align: false
+      attributeformat:
+        level: ' %attribute%'
+        module: ' [%attribute%] '
+        metadata: ' (%attribute%)'
+      colorize:
+        all: true
+        colors:
+          info: green
+          error: red
+          warn: yellow
+          debug: grey
+    targets:
+      console:
+        target: console
+        enabled: true
+        options:
+          level: debug
+      file:
+        target: file
+        enabled: true
+   # Worker options
+  worker:
+    # Indicate if workers are in distributed mode
+    remote: false
+    # Polling interval to use once created, in milliseconds
+    pollinterval: 5000
+    # Worker communication details
+    communication:
+      method: process 
