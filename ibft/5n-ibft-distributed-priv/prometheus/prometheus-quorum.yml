@@ -1,0 +1,26 @@
+global:
+  scrape_interval: 1s
+  external_labels:
+    monitor: 'devopsage-monitor'
+
+scrape_configs:
+  - job_name: 'prometheus'
+
+    # Retain labels, as within PushGateway use
+    honor_labels: true
+
+    static_configs:
+      - targets:
+          [
+            'prometheus:9090',
+            'pushGateway:9091',
+            'config_node_istanbul_1_1:8545',
+            'config_node_istanbul_2_1:8545',
+            'config_node_istanbul_3_1:8545',
+            'config_node_istanbul_4_1:8545',
+            'config_node_istanbul_5_1:8545',
+          ]
+  - job_name: cadvisor
+    scrape_interval: 1s
+    static_configs:
+      - targets: ['cadvisor:8080']

@@ -15,16 +15,16 @@
 ---
 test:
   workers:
-    number: 2
+    number: 5
   rounds:
     - label: open
-      txNumber: 100
+      txNumber: 200
       rateControl: { type: 'fixed-rate', opts: { tps: 10 } }
       arguments:
         money: 10000
       callback: ./open.js
     - label: query
-      txNumber: 200
+      txNumber: 250
       rateControl:
         {
           type: 'fixed-feedback-rate',
@@ -32,14 +32,14 @@ test:
         }
       callback: ./query.js
     - label: transfer
-      txNumber: 100
+      txNumber: 200
       rateControl:
         { type: 'linear-rate', opts: { startingTps: 5, finishingTps: 20 } }
       arguments:
         money: 10000
       callback: ./transfer.js
 observer:
-  interval: 2
+  interval: 3
   type: local
 monitor:
   interval: 1

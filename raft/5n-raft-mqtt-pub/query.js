@@ -41,7 +41,14 @@ module.exports.run = function() {
         return bc.bcObj.querySmartContract(contx, 'simple', 'v0', args, 10);
     } else {
         // NOTE: the query API is not consistent with the invoke API
-        return bc.queryState(contx, 'simple', 'v0', acc);
+        let args = {
+            verb: 'query',
+            args: [acc],
+            isView: true,
+            isPrivate: contx.contracts['simple'].isPrivate,
+            privateFor: contx.contracts['simple'].privateFor
+        }
+        return bc.querySmartContract(contx, 'simple', 'v0', args, 10);
     }
 };
 

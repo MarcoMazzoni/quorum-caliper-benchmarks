@@ -154,13 +154,13 @@
                     </tr>
 
                     <tr>
-                         <td>open</td> <td>100</td> <td>0</td> <td>10.2</td> <td>1.12</td> <td>0.02</td> <td>0.97</td> <td>9.2</td>
+                         <td>open</td> <td>200</td> <td>0</td> <td>10.2</td> <td>8.49</td> <td>1.23</td> <td>4.55</td> <td>7.5</td>
                     </tr>
                     <tr>
-                         <td>query</td> <td>200</td> <td>0</td> <td>10.1</td> <td>0.02</td> <td>0.00</td> <td>0.01</td> <td>10.1</td>
+                         <td>query</td> <td>250</td> <td>0</td> <td>10.2</td> <td>0.07</td> <td>0.00</td> <td>0.01</td> <td>10.2</td>
                     </tr>
                     <tr>
-                         <td>transfer</td> <td>100</td> <td>0</td> <td>7.9</td> <td>1.06</td> <td>0.04</td> <td>1.01</td> <td>7.4</td>
+                         <td>transfer</td> <td>200</td> <td>0</td> <td>8.0</td> <td>1.56</td> <td>0.19</td> <td>1.28</td> <td>7.6</td>
                     </tr>
                 </table>
             </div>
@@ -178,7 +178,7 @@
                                      <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
                                 </tr>
                                 <tr>
-                                     <td>open</td> <td>100</td> <td>0</td> <td>10.2</td> <td>1.12</td> <td>0.02</td> <td>0.97</td> <td>9.2</td>
+                                     <td>open</td> <td>200</td> <td>0</td> <td>10.2</td> <td>8.49</td> <td>1.23</td> <td>4.55</td> <td>7.5</td>
                                 </tr>
                             </table>
                         <h3>Resource utilization for open</h3>
@@ -190,7 +190,7 @@
                                          <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [B]</th> <th>Memory(avg) [B]</th>
                                     </tr>
                                     <tr>
-                                         <td>node(avg)</td> <td>55.02</td> <td>10.19</td> <td>-</td> <td>-</td>
+                                         <td>node(avg)</td> <td>34.84</td> <td>7.42</td> <td>-</td> <td>-</td>
                                     </tr>
                                 </table>
                                 </tr>
@@ -214,7 +214,7 @@
                                      <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
                                 </tr>
                                 <tr>
-                                     <td>query</td> <td>200</td> <td>0</td> <td>10.1</td> <td>0.02</td> <td>0.00</td> <td>0.01</td> <td>10.1</td>
+                                     <td>query</td> <td>250</td> <td>0</td> <td>10.2</td> <td>0.07</td> <td>0.00</td> <td>0.01</td> <td>10.2</td>
                                 </tr>
                             </table>
                         <h3>Resource utilization for query</h3>
@@ -226,7 +226,7 @@
                                          <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [B]</th> <th>Memory(avg) [B]</th>
                                     </tr>
                                     <tr>
-                                         <td>node(avg)</td> <td>6.98</td> <td>5.60</td> <td>-</td> <td>-</td>
+                                         <td>node(avg)</td> <td>9.03</td> <td>4.59</td> <td>-</td> <td>-</td>
                                     </tr>
                                 </table>
                                 </tr>
@@ -250,7 +250,7 @@
                                      <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
                                 </tr>
                                 <tr>
-                                     <td>transfer</td> <td>100</td> <td>0</td> <td>7.9</td> <td>1.06</td> <td>0.04</td> <td>1.01</td> <td>7.4</td>
+                                     <td>transfer</td> <td>200</td> <td>0</td> <td>8.0</td> <td>1.56</td> <td>0.19</td> <td>1.28</td> <td>7.6</td>
                                 </tr>
                             </table>
                         <h3>Resource utilization for transfer</h3>
@@ -262,7 +262,7 @@
                                          <th>Name</th> <th>CPU%(max)</th> <th>CPU%(avg)</th> <th>Memory(max) [B]</th> <th>Memory(avg) [B]</th>
                                     </tr>
                                     <tr>
-                                         <td>node(avg)</td> <td>9.70</td> <td>6.57</td> <td>-</td> <td>-</td>
+                                         <td>node(avg)</td> <td>7.87</td> <td>5.75</td> <td>-</td> <td>-</td>
                                     </tr>
                                 </table>
                                 </tr>
@@ -275,10 +275,10 @@
                 <h2>Test Environment</h2>
                 <h3>benchmark config</h3>
                 <pre id="benchmarkInfo" style="overflow: visible;white-space: pre-wrap;max-height:100%;">workers:
-  number: 2
+  number: 5
 rounds:
   - label: open
-    txNumber: 100
+    txNumber: 200
     rateControl:
       type: fixed-rate
       opts:
@@ -287,7 +287,7 @@ rounds:
       money: 10000
     callback: .&#x2F;open.js
   - label: query
-    txNumber: 200
+    txNumber: 250
     rateControl:
       type: fixed-feedback-rate
       opts:
@@ -295,7 +295,7 @@ rounds:
         unfinished_per_client: 5
     callback: .&#x2F;query.js
   - label: transfer
-    txNumber: 100
+    txNumber: 200
     rateControl:
       type: linear-rate
       opts:

@@ -27,7 +27,7 @@ total_nodes=5
 signer_nodes=5
 
 # Consensus engine ex. raft, istanbul
-consensus=raft
+consensus=istanbul
 
 # Block period for IBFT
 block_period=0

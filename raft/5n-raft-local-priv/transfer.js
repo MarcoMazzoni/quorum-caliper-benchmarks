@@ -50,7 +50,9 @@ module.exports.run = function() {
   } else {
     args = {
       verb: 'transfer',
-      args: [account1, account2, initmoney]
+      args: [account1, account2, initmoney],
+      isPrivate: contx.contracts['simple'].isPrivate,
+      privateFor: contx.contracts['simple'].privateFor
     };
   }
 
