@@ -56,7 +56,7 @@ fixed_accounts=true
 fixed_tessera_keys=true
 
 node_name_prefix=master
-auto_start_containers=false
+auto_start_containers=true
 
 ########################################################################
 

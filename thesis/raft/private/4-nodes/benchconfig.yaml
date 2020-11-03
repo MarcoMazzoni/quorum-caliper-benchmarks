@@ -1,0 +1,59 @@
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+---
+test:
+  workers:
+    number: 4
+  rounds:
+    - label: open
+      txNumber: 200
+      rateControl: { type: 'fixed-rate', opts: { tps: 25 } }
+      arguments:
+        money: 10000
+      callback: ./open.js
+    - label: query
+      txNumber: 200
+      rateControl: { type: 'fixed-rate', opts: { tps: 25 } }
+      callback: ./query.js
+    - label: transfer
+      txNumber: 200
+      rateControl: { type: 'fixed-rate', opts: { tps: 25 } }
+      arguments:
+        money: 1000
+      callback: ./transfer.js
+observer:
+  interval: 2
+  type: prometheus
+monitor:
+  interval: 1
+  type: prometheus
+  prometheus:
+    url: 'http://prometheus:9090'
+    push_url: 'http://pushGateway:9091'
+    metrics:
+      ignore: [prometheus, pushGateway, cadvisor, grafana, node-exporter]
+      include:
+        Avg Memory (MB):
+          query: sum(container_memory_rss{name=~".+"}) by (name)
+          step: 10
+          label: name
+          statistic: avg
+          multiplier: 0.000001
+        CPU (%):
+          query: sum(rate(container_cpu_usage_seconds_total{name=~".+"}[1m])) by (name)
+          step: 10
+          label: name
+          statistic: avg
+          multiplier: 100

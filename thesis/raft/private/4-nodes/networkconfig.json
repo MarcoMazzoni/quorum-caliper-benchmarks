@@ -1,0 +1,52 @@
+{
+  "caliper": {
+    "blockchain": "quorum",
+    "command": {
+      "start": "",
+      "end": ""
+    }
+  },
+  "quorum": {
+    "nodes": [
+      {
+        "url": "http://config_node_raft_1_1:8545",
+        "fromAddress": "0x39bfebd88ae7f3e29bf0b00536f39d8f62c0bea8",
+        "fromAddressPassword": "",
+        "privateFrom": "wiqpMpUGzgqB4RDUyLbmBXkcQU4NJdyES0rHg2A39jg="
+      },
+      {
+        "url": "http://config_node_raft_2_1:8545",
+        "fromAddress": "0x333927daba0e7dc239ce1a9da59f8f5412ddf6d9",
+        "fromAddressPassword": "",
+        "privateFrom": "n5si7WVQCinpdFKtXV+uQ3dlDjcFMEyvj9aMOvNFdBw="
+      },
+      {
+        "url": "http://config_node_raft_3_1:8545",
+        "fromAddress": "0xa2e358c6929b5b8fb5b49df6180f68442313047a",
+        "fromAddressPassword": "",
+        "privateFrom": "iqTeqnvEKdwZYTsDtrH7TwYs6x2uAuovmKznmzsJiQc="
+      },
+      {
+        "url": "http://config_node_raft_4_1:8545",
+        "fromAddress": "0x0eeffba46afe0a59156d3ad941048e7460ae29f8",
+        "fromAddressPassword": "",
+        "privateFrom": "wNoLz/knKJ6HCO1zNO4Bo8pYZJlW8Evv4vixPha3nlw="
+      }
+    ],
+    "contractDeployerAddress": "0x39bfebd88ae7f3e29bf0b00536f39d8f62c0bea8",
+    "contractDeployerAddressPassword": "",
+    "transactionConfirmationBlocks": 2,
+    "contracts": {
+      "simple": {
+        "path": "./simple/simple.json",
+        "isPrivate": true,
+        "privateFor": [
+          "wiqpMpUGzgqB4RDUyLbmBXkcQU4NJdyES0rHg2A39jg=",
+          "n5si7WVQCinpdFKtXV+uQ3dlDjcFMEyvj9aMOvNFdBw=",
+          "iqTeqnvEKdwZYTsDtrH7TwYs6x2uAuovmKznmzsJiQc=",
+          "wNoLz/knKJ6HCO1zNO4Bo8pYZJlW8Evv4vixPha3nlw="
+        ]
+      }
+    }
+  }
+}

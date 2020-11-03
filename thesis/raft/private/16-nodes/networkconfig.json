@@ -1,0 +1,65 @@
+{
+  "caliper": {
+      "blockchain": "quorum",
+      "command": {
+        "start": "",
+        "end": ""
+      }
+  },
+  "quorum": {
+      "nodes": [
+        {
+          "url": "http://config_node_raft_1_1:8545",
+          "fromAddress": "0x39bfebd88ae7f3e29bf0b00536f39d8f62c0bea8",
+          "fromAddressPassword": "",
+          "privateFrom": "wiqpMpUGzgqB4RDUyLbmBXkcQU4NJdyES0rHg2A39jg="
+      
+        },
+        {
+          "url": "http://config_node_raft_2_1:8545",
+          "fromAddress": "0x333927daba0e7dc239ce1a9da59f8f5412ddf6d9",
+          "fromAddressPassword": "",
+          "privateFrom": "n5si7WVQCinpdFKtXV+uQ3dlDjcFMEyvj9aMOvNFdBw="
+        },
+        {
+          "url": "http://config_node_raft_3_1:8545",
+          "fromAddress": "0xa2e358c6929b5b8fb5b49df6180f68442313047a",
+          "fromAddressPassword": "",
+          "privateFrom": "iqTeqnvEKdwZYTsDtrH7TwYs6x2uAuovmKznmzsJiQc="
+        },
+        {
+          "url": "http://config_node_raft_4_1:8545",
+          "fromAddress": "0x0eeffba46afe0a59156d3ad941048e7460ae29f8",
+          "fromAddressPassword": "",
+          "privateFrom": "wNoLz/knKJ6HCO1zNO4Bo8pYZJlW8Evv4vixPha3nlw="
+        }
+      ],   
+      "contractDeployerAddress": "0x39bfebd88ae7f3e29bf0b00536f39d8f62c0bea8",
+      "contractDeployerAddressPassword": "", 
+      "transactionConfirmationBlocks": 2,
+      "contracts": {
+          "simple": {
+              "path": "./simple/simple.json",
+              "isPrivate": true,
+              "privateFor": [
+                "wiqpMpUGzgqB4RDUyLbmBXkcQU4NJdyES0rHg2A39jg=",
+                "n5si7WVQCinpdFKtXV+uQ3dlDjcFMEyvj9aMOvNFdBw=",
+                "iqTeqnvEKdwZYTsDtrH7TwYs6x2uAuovmKznmzsJiQc=",
+                "wNoLz/knKJ6HCO1zNO4Bo8pYZJlW8Evv4vixPha3nlw=",
+                "eTKWifO/nyNZ+euNLnrkrpjJj+lwb9DWwrZp8+C5yHk=",
+                "2Zi+MZyl29KQVw+2YE7fFHQBRrl3rxaJVCe08CWqMG8=",
+                "fap4Uw1rb5bk9QMo1pjURc0YGXvzU/q6/daWL1f4IVE=",
+                "KlglI9yPx4rb0ngJ7SHE2ob33WvuS+xtjqezJkY7eGk=",
+                "Z4cvO4ZhFi29urGxBf+oSoKZfMScT7GCBIo3H8gfXCw=",
+                "RaPqHUlAVasS2b9wC4FllbkmshbSNpZqlJFrkMsw+Co=",
+                "+EBv6LQvQW0VuKrswVPhy6a+k3xTiZ8tL4ro+MoQZkQ=",
+                "VVBbWD8//xk/aCKIYs+JAI6uURZWJ5+K0uOBWFTaH10=",
+                "EXh64HVp2DC3JDEbYcwi4mtFtUVVkBP71rjEB6Vtezw=",
+                "0crOlEsr9CtcJ/+SzvoT138ottk0upWwDvNfuBjpQ1g=",
+                "i0HfgeyyhgfZ4QdOtUG7IiMQs9jqr53KJcFC+kqdAFs=",
+                "QFRLFCZKSVdJF2IyEKt3PU7cSHUPwC2aef4FsFusOCU="
+              ]
+          }
+      }
+  }
+}
