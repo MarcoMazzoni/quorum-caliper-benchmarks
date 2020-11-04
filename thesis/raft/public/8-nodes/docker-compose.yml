@@ -29,7 +29,7 @@ services:
       - CALIPER_BENCHCONFIG=benchconfig.yaml
       - CALIPER_NETWORKCONFIG=networkconfig.json
     volumes:
-      - ~/Desktop/quorum-caliper-benchmarks/raft/5n-raft-distributed-pub:/hyperledger/caliper/workspace
+      - ~/Desktop/quorum-caliper-benchmarks/thesis/raft/public/8-nodes:/hyperledger/caliper/workspace
     depends_on:
       - mqtt_broker
     networks:
@@ -45,7 +45,7 @@ services:
       - CALIPER_BENCHCONFIG=benchconfig.yaml
       - CALIPER_NETWORKCONFIG=networkconfig.json
     volumes:
-      - ~/Desktop/quorum-caliper-benchmarks/raft/5n-raft-distributed-pub:/hyperledger/caliper/workspace
+      - ~/Desktop/quorum-caliper-benchmarks/thesis/raft/public/8-nodes:/hyperledger/caliper/workspace
     depends_on:
       - mqtt_broker
       - caliper_master
@@ -62,7 +62,7 @@ services:
       - CALIPER_BENCHCONFIG=benchconfig.yaml
       - CALIPER_NETWORKCONFIG=networkconfig.json
     volumes:
-      - ~/Desktop/quorum-caliper-benchmarks/raft/5n-raft-distributed-pub:/hyperledger/caliper/workspace
+      - ~/Desktop/quorum-caliper-benchmarks/thesis/raft/public/8-nodes:/hyperledger/caliper/workspace
     depends_on:
       - mqtt_broker
       - caliper_master
@@ -79,7 +79,7 @@ services:
       - CALIPER_BENCHCONFIG=benchconfig.yaml
       - CALIPER_NETWORKCONFIG=networkconfig.json
     volumes:
-      - ~/Desktop/quorum-caliper-benchmarks/raft/5n-raft-distributed-pub:/hyperledger/caliper/workspace
+      - ~/Desktop/quorum-caliper-benchmarks/thesis/raft/public/8-nodes:/hyperledger/caliper/workspace
     depends_on:
       - mqtt_broker
       - caliper_master
@@ -96,7 +96,7 @@ services:
       - CALIPER_BENCHCONFIG=benchconfig.yaml
       - CALIPER_NETWORKCONFIG=networkconfig.json
     volumes:
-      - ~/Desktop/quorum-caliper-benchmarks/raft/5n-raft-distributed-pub:/hyperledger/caliper/workspace
+      - ~/Desktop/quorum-caliper-benchmarks/thesis/raft/public/8-nodes:/hyperledger/caliper/workspace
     depends_on:
       - mqtt_broker
       - caliper_master
@@ -104,22 +104,6 @@ services:
       - config_quorum_net
       - caliper_net
 
-  caliper_worker_5:
-    container_name: caliper_worker_5
-    image: marcomazzoni/caliper-quorum:testing
-    command: launch worker
-    environment:
-      - CALIPER_BIND_SUT=quorum
-      - CALIPER_BENCHCONFIG=benchconfig.yaml
-      - CALIPER_NETWORKCONFIG=networkconfig.json
-    volumes:
-      - ~/Desktop/quorum-caliper-benchmarks/raft/5n-raft-distributed-pub:/hyperledger/caliper/workspace
-    depends_on:
-      - mqtt_broker
-      - caliper_master
-    networks:
-      - config_quorum_net
-      - caliper_net
   ####################
   # MONITORING SERVICES #
   ####################

@@ -32,12 +32,6 @@
           "fromAddress": "0x0eeffba46afe0a59156d3ad941048e7460ae29f8",
           "fromAddressPassword": "",
           "privateFrom": "wNoLz/knKJ6HCO1zNO4Bo8pYZJlW8Evv4vixPha3nlw="
-        },
-        {
-          "url": "http://config_node_raft_5_1:8545",
-          "fromAddress": "0x74c6a61fdeb23d0a7bbf591285d6596104b04525",
-          "fromAddressPassword": "",
-          "privateFrom": "eTKWifO/nyNZ+euNLnrkrpjJj+lwb9DWwrZp8+C5yHk="
         }
 
       ],   

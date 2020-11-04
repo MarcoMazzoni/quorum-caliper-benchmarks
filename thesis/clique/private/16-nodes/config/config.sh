@@ -33,7 +33,7 @@ total_nodes=16
 signer_nodes=16
 
 # Consensus engine ex. raft, clique, istanbul
-consensus=raft
+consensus=clique
 
 # Block period for IBFT and Clique
 block_period=1
@@ -54,7 +54,7 @@ fixed_accounts=true
 fixed_tessera_keys=true
 
 node_name_prefix=master
-auto_start_containers=false
+auto_start_containers=true
 
 ########################################################################
 
